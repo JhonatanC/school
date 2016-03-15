@@ -28,8 +28,8 @@ $factory->define(App\Models\Score::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Models\Grade::class, function (Faker\Generator $faker) {
     return [
-        'score' => $faker->name,
+        'name' => $faker->name,
         'user_id' => rand(1,100),
-        'subject_id' => rand(1,11)
+        'subject_id' => rand(1,10)
     ];
 });
