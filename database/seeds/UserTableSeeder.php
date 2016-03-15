@@ -18,7 +18,8 @@ class UserTableSeeder extends Seeder
             'type' => 'admin',
             'email' => 'jdev@gmail.com',
             'password' => bcrypt('secret'),
+            'remember_token' => bcrypt('secret')
         ]);
-        factory(App\Models\User::class, 99)->create();
+        factory(App\Models\User::class, 9)->create();
     }
 }

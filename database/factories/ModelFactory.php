@@ -7,15 +7,15 @@ $factory->define(App\Models\User::class, function (Faker\Generator $faker) {
         'username' => $faker->name,
         'type' => $faker->randomElement(['teaching','student']),
         'email' => $faker->email,
-        'password' => bcrypt(str_random(10)),
-        'remember_token' => str_random(10),
+        'password' => bcrypt(1234),
+        'remember_token' => bcrypt(1234),
     ];
 });
 
 $factory->define(App\Models\Subject::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
-        'user_id' => rand(1,100)
+        'user_id' => rand(1,9)
     ];
 });
 
@@ -29,7 +29,7 @@ $factory->define(App\Models\Score::class, function (Faker\Generator $faker) {
 $factory->define(App\Models\Grade::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
-        'user_id' => rand(1,100),
+        'user_id' => rand(1,9),
         'subject_id' => rand(1,10)
     ];
 });

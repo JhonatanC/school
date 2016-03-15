@@ -10,11 +10,12 @@
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {!! csrf_field() !!}
 
+                        <!--Nombre-->
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Name</label>
+                            <label class="col-md-4 control-label">Nombre</label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+                                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Nombre">
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -24,11 +25,42 @@
                             </div>
                         </div>
 
+                        <!--Apellido-->
+                        <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Apellido</label>
+
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" placeholder="Apellido">
+
+                                @if ($errors->has('last_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('last_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <!--Nombre de Usuario-->
+                        <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Nombre de Usuario</label>
+
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="username" value="{{ old('username') }}" placeholder="Nombre de Usuario">
+
+                                @if ($errors->has('username'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('username') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <!--Email-->
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="email@example.com">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -38,11 +70,12 @@
                             </div>
                         </div>
 
+                        <!--Contraseña-->
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Password</label>
 
                             <div class="col-md-6">
-                                <input type="password" class="form-control" name="password">
+                                <input type="password" class="form-control" name="password" placeholder="••••••">
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -52,11 +85,12 @@
                             </div>
                         </div>
 
+                        <!--Confirmar Contraseña-->
                         <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Confirm Password</label>
 
                             <div class="col-md-6">
-                                <input type="password" class="form-control" name="password_confirmation">
+                                <input type="password" class="form-control" name="password_confirmation" placeholder="••••••">
 
                                 @if ($errors->has('password_confirmation'))
                                     <span class="help-block">
