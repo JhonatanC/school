@@ -8,8 +8,11 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    {{ Auth::user()->name ." " . Auth::user()->last_name }}
                 </div>
+
+                <img class="avatar" src="{{ Auth::user()->avatar }}.jpg" alt=""/>
+
             </div>
         </div>
     </div>

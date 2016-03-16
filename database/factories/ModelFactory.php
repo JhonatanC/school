@@ -6,9 +6,9 @@ $factory->define(App\Models\User::class, function (Faker\Generator $faker) {
         'last_name' => $faker->name,
         'username' => $faker->name,
         'type' => $faker->randomElement(['teaching','student']),
+        'avatar' =>$faker->imageUrl($width = 200, $height = 200),
         'email' => $faker->email,
         'password' => bcrypt(1234),
-        'remember_token' => bcrypt(1234),
     ];
 });
 
