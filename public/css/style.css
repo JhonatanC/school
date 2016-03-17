@@ -58,6 +58,7 @@ ul{
     display: none;
 }
 
+
 @media only screen and (max-width: 768px){
     .nav{
         border-bottom: 1px solid rgba(0,0,0,0.1);
@@ -80,8 +81,7 @@ ul{
 
     .style-mobile{
         background: #ffffff;
-        display: block;
-        top : 0px;
+        top : 51px;
         position : absolute;
         width : 100%;
     }
